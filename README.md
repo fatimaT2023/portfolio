@@ -37,9 +37,11 @@ ________________________________________________________________________
  The portfolio uses a Cream, Olive, Dark Green, and Gold color palette to create a modern, elegant, and professional look.
 ________________________________________________________________________
  Preview📸 :
- احط سكرين شوت عن الهيرو سكشن 
-________________________________________________________________________
- (❁´◡`❁)live Demo:
+
+
+![hero section preview](../preview.png)
+
+
 ________________________________________________________________________
  ContacC🌐:
  email:fatimatawalbeh9@gmail.com
