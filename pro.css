@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(241, 232, 220);
+    background-color: rgb(241, 232, 220) !important;
     font-family: Arial, Helvetica, sans-serif;
 }
 *{
@@ -8,7 +8,7 @@ body{
  
 /* ===== Navbar ===== */
 .container-fluid{
-    background-color: transparent;
+    background-color:rgb(241, 232, 220);
     display: flex;
     justify-content: space-between;
     /* هاي ما بتشتغلششش */
@@ -30,9 +30,12 @@ body{
 }
 /* الي فيها كل اليينكات */
 .navbar-nav{
-    display: flex;
-    gap: 30px;
+    display: flex !important;
+    gap: 30px !important;
     /* عشان ما احتاج مارجن لكل وحده */
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+
 }
 .nav-link{
     color: #243f05 !important;
@@ -40,7 +43,7 @@ body{
 }
 hr{
     border: none;
-    border-top: 1px solid #022508;
+    border-top: 1px solid #022508 !important;
     width: 100%;
     margin: 0 auto;
 }
@@ -48,7 +51,7 @@ a{
     color:#0f280c;
 }
 a:hover{
-    color: hsl(129, 72%, 43%) !important;
+    color: hsl(130, 32%, 54%) !important;
 }
  
                                                       /* ===== Hero ===== */
@@ -95,27 +98,7 @@ a:hover{
     border-radius: 20px;
    
 }
-/* .floating-card{
-    position: absolute;
-    bottom: -30px;
-    left: -40px;
-    z-index: 2;
-    background: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15); */
 
-/* .floating-card h4{
-    color: #6b7a3a;
-    font-size: 1.4rem;
-    margin: 0 0 4px;
-}
-.floating-card p{
-    font-size: 0.9rem;
-    margin: 0;
-} */
- 
-/* text + highlight + buttons */
 .hero-text{
     flex: 1;
 }
@@ -222,6 +205,12 @@ a:hover{
     color: antiquewhite;
     font-size: 20px;
 }
+blockquote { text-align: center; 
+    font-size: 20px; 
+    font-style: italic; 
+    margin-bottom: 25px;
+    color: #dff0d3;
+ }
  
                                                         /* ===== Experience ===== */
 #experience h2{
@@ -242,10 +231,11 @@ a:hover{
 @media (max-width: 768px) {
     .experience-container {
         flex-direction: column;
+        font-size: 10px;
     }
 }
  
-/* ===== Qualifications ===== */
+                                            /* ===== Qualifications ===== */
 #qualifications h2{
     text-align: center;
     margin-bottom: 30px;
@@ -276,12 +266,13 @@ a:hover{
     margin-bottom: 5px;
     color: antiquewhite;
 }
-/* .qualification img{
-    width:100px;
-} */
+
 .qualification span {
     font-size: 14px;
     color: #ebf1d7;
+}
+.green-icon {
+    color: rgb(6, 69, 6);
 }
 @media (max-width: 768px) {
     .qualification-container {
@@ -289,7 +280,7 @@ a:hover{
     }
 }
  
-/* ===== Skills ===== */
+                                               /* ===== Skills ===== */
 #skills {
     padding: 60px 20px;
 }
@@ -316,8 +307,11 @@ a:hover{
     display: inline-block;
     padding: 8px 15px;
     margin: 5px;
-    border: 1px solid #4d1414;
+    border: 1px solid hsl(129, 89%, 10%);
     border-radius: 20px;
+}
+.skill:hover{
+    background: #023f03;
 }
 @media (max-width: 768px) {
     .skills-container {
@@ -328,8 +322,8 @@ a:hover{
         max-width: 100%;
     }
 }
- 
-/* ===== Projects ===== */
+  
+                                           /* ===== Projects ===== */
 #projects {
     padding: 60px 20px;
 }
@@ -348,6 +342,10 @@ a:hover{
     border-radius: 10px;
     box-shadow: 0 15px 35px #193705;
 }
+.project-card:hover{
+    background-color: hwb(112 31% 51%);
+     transform: scale(1.05);
+}
 .project-card a {
     display: inline-block;
     margin-top: 10px;
@@ -358,7 +356,7 @@ a:hover{
     }
 }
  
-/* ===== References ===== */
+                                             /* ===== References ===== */
 #references {
     padding: 60px 20px;
 }
@@ -379,6 +377,13 @@ a:hover{
     border-radius: 20px;
     box-shadow: 0 15px 35px #013104;
 }
+.reference-card:hover{
+    background-color: hwb(119 1% 81%);
+    color:#cadcb6;
+   
+}
+
+
 @media (max-width: 768px) {
     .references-container {
         flex-direction: column;
@@ -387,13 +392,7 @@ a:hover{
         max-width: 100%;
     }
 }
-                             /* ============================ footer */
-/* .nav-item a:hover{
-color:#6b7a3a !important;
-} */
- .footerp{
-    font-size: 20px !important;
-    color:#6b7a3a !important;
-    display: inline-block !important;
- }
+                             /* ============================ footer *======================*/
+
  
+
