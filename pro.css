@@ -10,8 +10,7 @@ body{
 .container-fluid{
     background-color:rgb(241, 232, 220);
     display: flex;
-    justify-content: space-between;
-    /* هاي ما بتشتغلششش */
+    
     align-items: center;
     padding: 20px;
     position: fixed;
@@ -34,7 +33,7 @@ body{
     gap: 30px !important;
     /* عشان ما احتاج مارجن لكل وحده */
     align-items: flex-start !important;
-    justify-content: space-between !important;
+    /* justify-content: space-between !important; */
 
 }
 .nav-link{
@@ -42,10 +41,11 @@ body{
     padding: 8px 10px !important;
 }
 hr{
-    border: none;
+   
     border-top: 1px solid #022508 !important;
     width: 100%;
     margin: 0 auto;
+/* calculated by the browser */
 }
 a{
     color:#0f280c;
@@ -99,9 +99,7 @@ a:hover{
    
 }
 
-.hero-text{
-    flex: 1;
-}
+
 .hero-text h1{
     font-size: clamp(2.8rem, 6vw, 4.5rem);
     font-weight: 800;
@@ -111,18 +109,13 @@ a:hover{
 .highlight{
     color: #6b7a3a;
 }
-.hero-text h3{
-    font-size: 1.3rem;
-    font-weight: normal;
-    color: #4d1414;
-    margin-bottom: 30px;
-}
+
 .hero-buttons{
     display: flex;
     gap: 20px;
 }
 .btn-dark-pill{
-    background: #2b2b1f;
+    background: #293818;
     color: #fff;
     padding: 14px 28px;
     border-radius: 50px;
@@ -132,18 +125,8 @@ a:hover{
     background: hsl(84, 25%, 45%);
     color: #fff;
 }
-.btn-outline-pill{
-    border: 2px solid #2b2b1f;
-    color: #2b2b1f;
-    padding: 14px 28px;
-    border-radius: 50px;
-    background: transparent;
-    font-weight: 600;
-}
-.btn-outline-pill:hover{
-    border-color: #6b7a3a;
-    color: #6b7a3a;
-}
+
+
  
 @media (max-width: 768px) {
     .hero-container{
@@ -154,11 +137,7 @@ a:hover{
     .hero-buttons{
         justify-content: center;
     }
-    /* .floating-card{
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -20px;
-    } */
+    
 }
  
                                                    /* ===== About ===== */
@@ -172,7 +151,7 @@ a:hover{
     background-color: #14290A;
     border-radius: 20px;
     padding: 50px;
-    display: flex;
+    /* display: flex; */
     gap: 50px;
 }
 
@@ -211,6 +190,12 @@ blockquote { text-align: center;
     margin-bottom: 25px;
     color: #dff0d3;
  }
+ @media (max-width: 768px) {
+    .about-card {
+        flex-direction: column;
+        font-size: 10px;
+    }
+}
  
                                                         /* ===== Experience ===== */
 #experience h2{
@@ -223,6 +208,7 @@ blockquote { text-align: center;
 }
 .experience-card {
     flex: 1;
+    /* يقسمو المساح النتاحه بالتساوي كل كرت بتخليهم يتخذو نفس العرض */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -273,6 +259,7 @@ blockquote { text-align: center;
 }
 .green-icon {
     color: rgb(6, 69, 6);
+
 }
 @media (max-width: 768px) {
     .qualification-container {
@@ -281,9 +268,9 @@ blockquote { text-align: center;
 }
  
                                                /* ===== Skills ===== */
-#skills {
+/* #skills {
     padding: 60px 20px;
-}
+} */
 #skills h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -329,7 +316,7 @@ blockquote { text-align: center;
 }
 #projects h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .projects-container {
     display: flex;
@@ -346,10 +333,10 @@ blockquote { text-align: center;
     background-color: hwb(112 31% 51%);
      transform: scale(1.05);
 }
-.project-card a {
+/* .project-card a {
     display: inline-block;
     margin-top: 10px;
-}
+} */
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
