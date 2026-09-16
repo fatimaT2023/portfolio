@@ -1,6 +1,22 @@
 body{
     background-color: rgb(241, 232, 220) !important;
     font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    position: relative;
+     overflow-x: hidden;
+   
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+    /* عشان يضل ورا العناصر  */
 }
 *{
     box-sizing: border-box;
@@ -8,7 +24,8 @@ body{
  
 /* ===== Navbar ===== */
 .container-fluid{
-    background-color:rgb(241, 232, 220);
+    background-color:#e3c7b3
+    ;
     display: flex;
     
     align-items: center;
@@ -21,7 +38,7 @@ body{
 }
 /* الاسم والشعار */
 .navbar-brand{
-    color: #023f03;
+    color: #171c10;
     font-size: 1.4rem;
     /* =22px */
     font-weight: 700;
@@ -37,7 +54,7 @@ body{
 
 }
 .nav-link{
-    color: #243f05 !important;
+    color: #0a0c08 !important;
     padding: 8px 10px !important;
 }
 hr{
@@ -48,10 +65,12 @@ hr{
 /* calculated by the browser */
 }
 a{
-    color:#0f280c;
+    color:#e5f4e3;
 }
 a:hover{
-    color: hsl(130, 32%, 54%) !important;
+    color: lab(4.84% -1.59 4.34) !important;
+     box-shadow: 0 15px 9px hwb(62 80% 5%);
+
 }
  
                                                       /* ===== Hero ===== */
@@ -74,6 +93,7 @@ a:hover{
     position: relative;
     /* يعني زي نقطه مرجعيه لاي عنصر بنحط جواه */
     flex: 0 0 320px;
+   
     /* flex-grow=0 يعني ما تكبر اكثر من حجمها */
     /* flex-shrink: 0 ما تصغر لو ضاقت المساحه */
     /* flex-basis: 320px يعني ثبتنا  انه حجم الاساسي 320حء */
@@ -88,17 +108,23 @@ a:hover{
     border-radius: 50%;
     background: #6b7a3a;
     z-index: 0;
+    box-shadow: #013104;
 }
 .hero-image img{
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 450px;
     height: auto;
     display: block;
-    border-radius: 20px;
-   
-}
+    border-radius: 50%;
+      box-shadow: 0 15px 35px hwb(62 80% 5%);
 
+    /* يمين او يسار +فوق وتحت+الظل+اللون */
+}
+.hero-image img:hover{
+     box-shadow: 77px 85px 95px hwb(62 80% 5%);
+
+}
 
 .hero-text h1{
     font-size: clamp(2.8rem, 6vw, 4.5rem);
@@ -107,7 +133,7 @@ a:hover{
     margin-bottom: 15px;
 }
 .highlight{
-    color: #6b7a3a;
+    color: lab(96.5% -5.63 19.02);
 }
 
 .hero-buttons{
@@ -115,14 +141,14 @@ a:hover{
     gap: 20px;
 }
 .btn-dark-pill{
-    background: #293818;
+    background: #171c10;
     color: #fff;
     padding: 14px 28px;
     border-radius: 50px;
     font-weight: 600;
 }
 .btn-dark-pill:hover{
-    background: hsl(84, 25%, 45%);
+    background: hwb(58 68% 17%);
     color: #fff;
 }
 
@@ -137,7 +163,14 @@ a:hover{
     .hero-buttons{
         justify-content: center;
     }
-    
+    .hero-image img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    }
 }
  
                                                    /* ===== About ===== */
@@ -148,11 +181,13 @@ a:hover{
 }
 
 .about-card{
-    background-color: #14290A;
+    background-color: #171c10;
     border-radius: 20px;
     padding: 50px;
-    /* display: flex; */
+    display: flex;
     gap: 50px;
+        box-shadow: 0 35px 70px hwb(62 80% 5%);
+
 }
 
 .about-stats{
@@ -162,12 +197,12 @@ a:hover{
     width: 300px;
 }
 .stat-card{
-    background-color: #213917;
+    background-color:transparent;
     border-radius: 10px;
     padding: 20px;
 }
 .stat-card h3{
-    color: rgb(98, 142, 87);
+    color: #e3c7b3;
 }
 .stat-card p{
     color: antiquewhite;
@@ -188,12 +223,15 @@ blockquote { text-align: center;
     font-size: 20px; 
     font-style: italic; 
     margin-bottom: 25px;
-    color: #dff0d3;
+    color: hsl(45, 61%, 89%);
  }
  @media (max-width: 768px) {
     .about-card {
         flex-direction: column;
         font-size: 10px;
+    }
+    .stat-card{
+        overflow: hidden;
     }
 }
  
@@ -204,16 +242,26 @@ blockquote { text-align: center;
 }
 .experience-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 .experience-card {
     flex: 1;
     /* يقسمو المساح النتاحه بالتساوي كل كرت بتخليهم يتخذو نفس العرض */
     padding: 20px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 10px;
-    box-shadow: 0 15px 35px #213917;
+    box-shadow: 0 11px 19px #edf3e6;
+
 }
+
+.experience-card:hover{ 
+     transform: translateY(20px);
+     
+    box-shadow: 0 0px 15px  #171c10;
+    overflow: visible;
+}
+
 @media (max-width: 768px) {
     .experience-container {
         flex-direction: column;
@@ -227,10 +275,10 @@ blockquote { text-align: center;
     margin-bottom: 30px;
 }
 .qualification a{
-    color:#ddd
+    color:#081407
 }
 .qualification a:hover{
-    color:hsl(122, 58%, 64%)
+    color:hsl(42, 30%, 92%) !important;
 }
 .qualification-container {
     display: flex;
@@ -240,25 +288,30 @@ blockquote { text-align: center;
 .qualification {
     flex: 1;
     padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #14330d;
+   box-shadow: 0 15px 35px lab(54.09% -4.58 12.34);
+
+    border-radius: 20px;
+    background-color:  sl(38, 68%, 80%);
+}
+.qualification img{
+    width:90px;
+    height: 90px;
 }
 .qualification h3 {
     margin-bottom: 10px;
-    color:antiquewhite
+    color:rgb(40, 29, 13)
 }
 .qualification p {
     margin-bottom: 5px;
-    color: antiquewhite;
+    color: hsl(34, 76%, 6%);
 }
 
 .qualification span {
     font-size: 14px;
-    color: #ebf1d7;
+    color: #1e240a;
 }
 .green-icon {
-    color: rgb(6, 69, 6);
+    color: rgb(3, 24, 3);
 
 }
 @media (max-width: 768px) {
@@ -294,12 +347,10 @@ blockquote { text-align: center;
     display: inline-block;
     padding: 8px 15px;
     margin: 5px;
-    border: 1px solid hsl(129, 89%, 10%);
+    border: 1px solid transparent;
     border-radius: 20px;
 }
-.skill:hover{
-    background: #023f03;
-}
+
 @media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
@@ -325,13 +376,16 @@ blockquote { text-align: center;
 .project-card {
     flex: 1;
     padding: 30px;
-    border: 5px solid hsl(139, 88%, 13%);
+    border: 3px solid lab(93.98% -2.55 18.05);
     border-radius: 10px;
-    box-shadow: 0 15px 35px #193705;
+    box-shadow: 0 15px 35px hwb(62 80% 5%);
 }
 .project-card:hover{
-    background-color: hwb(112 31% 51%);
+   
      transform: scale(1.05);
+}
+.project-card a{
+    color:aliceblue;
 }
 /* .project-card a {
     display: inline-block;
@@ -349,7 +403,7 @@ blockquote { text-align: center;
 }
 #references h2 {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 .references-container {
     display: flex;
@@ -358,15 +412,17 @@ blockquote { text-align: center;
 }
 .reference-card {
     flex: 1;
+    color: #e3c7b3;
     max-width: 500px;
+    background-color: #081407;
     padding: 25px;
-    border: 1px solid hsl(124, 97%, 13%);
+    border: 1px solid hsl(52, 49%, 88%);
     border-radius: 20px;
-    box-shadow: 0 15px 35px #013104;
+    box-shadow: 0 15px 35px hsl(124, 100%, 93%);
 }
-.reference-card:hover{
-    background-color: hwb(119 1% 81%);
-    color:#cadcb6;
+.reference-card:hover a{
+   color: #edf3e6 !important;
+   
    
 }
 
