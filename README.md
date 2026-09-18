@@ -2,7 +2,7 @@
 Fatima_Tawalbeh
 # 🌐 Live Demo
 
-👉 [View My Portfolio](https://fatimaT2023.github.io/portfolio)
+👉 [View My Portfolio](https://fatimat2023.github.io/portfolio//)
 
 welcom to my personal protfolio 👋🏼
 This is a responsive personal protgolio website designed to introduce me, showcase my skills and projects, and provide a way to get in touch with me.
